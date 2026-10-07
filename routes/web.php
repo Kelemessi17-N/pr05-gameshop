@@ -6,6 +6,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::get('/contact', function () {
+//    return view('contact');
+//});
+
+Route::get('/contact', function () {
+    $contact = 'Loren Imsen Contact';
+    return view('contact', [
+        'contact' => $contact
+    ]);
+});
+
+Route::get('products/{id}', function (string $id) {
+    return view('product', ['id' => $id]);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -17,4 +31,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
