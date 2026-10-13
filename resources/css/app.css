@@ -12,7 +12,7 @@
     gap: 30px;
 }
 
-.navbar .logo {
+.logo {
     font-size: 26px;
     font-weight: bold;
     color: white;
@@ -38,7 +38,7 @@
     gap: 12px;
 }
 
-.nav-right .register {
+.register {
     background-color: #8b5cf6;
     padding: 9px 14px;
     border-radius: 8px;
@@ -51,6 +51,13 @@
     color: black;
 }
 
+.login:hover {
+    background-color: #e5e7eb;
+}
+
+.register:hover {
+    background-color: #7c3aed;
+}
 
 
 
