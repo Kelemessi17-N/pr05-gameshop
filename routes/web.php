@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,6 +11,17 @@ Route::get('/', function () {
 //Route::get('/contact', function () {
 //    return view('contact');
 //});
+
+
+Route::view('/home', 'home')->name('home');
+Route::view('/products', 'products')->name('products');
+Route::view('/review', 'reviews')->name('reviews');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/register', 'register')->name('register');
+Route::view('/login', 'login')->name('login');
+
+
+Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/contact', function () {
     $contact = 'Loren Imsen Contact';
@@ -32,3 +45,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+
+
