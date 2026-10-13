@@ -19,5 +19,5 @@
         <a href="/register" class="register"> Register </a>
     </div>
 
-    {{ $slot }}
+    
 </nav>
